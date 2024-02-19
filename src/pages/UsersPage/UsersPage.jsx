@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getUsers } from "../../components/services/requests";
+import { getUsers } from "../../services/requests";
+import UsersList from "../../components/UserList/UsersList";
 
 const UsersPage = () => {
   const [users, setUsers] = useState(null);
@@ -16,13 +17,7 @@ const UsersPage = () => {
   return (
     <div>
       {loading && <p>Loading....</p>}
-      {users && (
-        <ul>
-          {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
-          ))}
-        </ul>
-      )}
+      {users && <UsersList users={users} />}
     </div>
   );
 };
