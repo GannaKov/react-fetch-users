@@ -1,0 +1,9 @@
+.cardWrp {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 800px) {
+  .cardWrp {
+    width: 500px;
+  }
+}

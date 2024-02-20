@@ -9,6 +9,7 @@ const GoBack = ({ handleGoBackClick }) => {
     // </button>
 
     <Button
+      style={{ marginBottom: "2rem" }}
       onClick={handleGoBackClick}
       // rightIcon={<ArrowForwardIcon />}
       colorScheme="pink"
