@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../services/requests";
 import UsersList from "../../components/UserList/UsersList";
+import styles from "./UsersPage.module.css";
 
 const UsersPage = () => {
   const [users, setUsers] = useState(null);
@@ -15,7 +16,7 @@ const UsersPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.listWrp}>
       {loading && <p>Loading....</p>}
       {users && <UsersList users={users} />}
     </div>

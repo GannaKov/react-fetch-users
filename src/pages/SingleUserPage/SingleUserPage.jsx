@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { getSingleUserById } from "../../services/requests";
+import styles from "./SingleUserPage.module.css";
 import GoBack from "../../components/GoBackBtn/GoBack";
 
 const SingleUserPage = () => {
@@ -25,7 +26,7 @@ const SingleUserPage = () => {
   }
   //const { username, email, address, phone, website, company } = user;
   return (
-    <div>
+    <div className={styles.sectionWrp}>
       <GoBack handleGoBackClick={handleGoBackClick} />
       {loading && <p>Loading....</p>}
       {user && (

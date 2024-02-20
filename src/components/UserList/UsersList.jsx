@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import styles from "./UsersList.module.css";
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   SimpleGrid,
@@ -20,7 +20,7 @@ const UsersList = ({ users }) => {
       templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
     >
       {users.map((user) => (
-        <Link to={`${user.id}`} key={user.id}>
+        <Link to={`${user.id}`} key={user.id} className={styles.userCardLink}>
           <Card
             direction={{ base: "column", sm: "row" }}
             overflow="hidden"
