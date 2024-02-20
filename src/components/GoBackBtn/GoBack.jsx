@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Button, Stack } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { FaArrowLeft } from "react-icons/fa";
 
 const GoBack = ({ handleGoBackClick }) => {

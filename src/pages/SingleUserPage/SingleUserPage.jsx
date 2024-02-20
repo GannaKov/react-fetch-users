@@ -3,6 +3,7 @@ import { Link, Outlet, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { getSingleUserById } from "../../services/requests";
 import styles from "./SingleUserPage.module.css";
+import { Spinner } from "@chakra-ui/react";
 import GoBack from "../../components/GoBackBtn/GoBack";
 
 const SingleUserPage = () => {
@@ -27,8 +28,16 @@ const SingleUserPage = () => {
   //const { username, email, address, phone, website, company } = user;
   return (
     <div className={styles.sectionWrp}>
+      {loading && (
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="pink.300"
+          size="lg"
+        />
+      )}
       <GoBack handleGoBackClick={handleGoBackClick} />
-      {loading && <p>Loading....</p>}
       {user && (
         <>
           <img
