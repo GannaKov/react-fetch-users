@@ -12,7 +12,6 @@ const Address = () => {
     getSingleUserById(id)
       .then((res) => {
         setUser(res.address);
-        console.log(res);
       })
       .catch((error) => console.log(error.message));
   }, [id]);

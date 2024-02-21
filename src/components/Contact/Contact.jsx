@@ -12,7 +12,6 @@ const Contact = () => {
     getSingleUserById(id)
       .then((res) => {
         setUser(res);
-        console.log(res);
       })
       .catch((error) => console.log(error.message));
   }, [id]);
