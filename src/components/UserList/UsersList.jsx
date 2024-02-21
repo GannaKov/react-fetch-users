@@ -19,8 +19,8 @@ const UsersList = ({ users }) => {
       spacing={10}
       templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
     >
-      {users.map((user) => (
-        <Link to={`${user.id}`} key={user.id} className={styles.userCardLink}>
+      {users.map(({ id, name, username }) => (
+        <Link to={`${id}`} key={id} className={styles.userCardLink}>
           <Card
             direction={{ base: "column", sm: "row" }}
             overflow="hidden"
@@ -30,18 +30,18 @@ const UsersList = ({ users }) => {
               // maxW={{ base: "100%", sm: "100px" }}
               objectFit="content"
               src="https://fakeimg.pl/100x100/e681cd/f2e9e9?text=User&font=lobster"
-              alt={user.name}
+              alt={name}
               borderRadius="lg"
             />
             <Stack mt="6" spacing="3" style={{ width: "100%" }}>
               <CardBody>
-                <Heading size="md"> User {user.id}</Heading>
+                <Heading size="md"> User {id}</Heading>
 
-                <Text>{user.name}</Text>
+                <Text>{name}</Text>
               </CardBody>
               <Divider />
               <CardFooter style={{ justifyContent: "center" }}>
-                <Text>{user.username}</Text>
+                <Text>{username}</Text>
               </CardFooter>
             </Stack>
           </Card>

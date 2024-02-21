@@ -46,11 +46,9 @@ const SingleUserPage = () => {
       <GoBack handleGoBackClick={handleGoBackClick} />
       {isFetch && (
         <>
-          {" "}
           {user ? (
             <>
               <div className={styles.cardWrp}>
-                {" "}
                 <Card maxW="sm" style={{ margin: "0 auto" }} align="center">
                   <CardBody>
                     <Image

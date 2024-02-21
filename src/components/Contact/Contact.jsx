@@ -17,24 +17,25 @@ const Contact = () => {
       .catch((error) => console.log(error.message));
   }, [id]);
 
+  if (!user) {
+    return null;
+  }
+
+  const { email, phone, website } = user;
   return (
     <div className={styles.cardWrp}>
       {user && (
         <>
           <Card maxW="sm" style={{ margin: "0 auto" }}>
             <CardBody>
-              {" "}
               <Heading size="md">User&apos;s Contact</Heading>
               <Stack mt="6" spacing="2">
-                <Text>{user.email}</Text>
-                <Text>{user.phone}</Text>
-                <Text>{user.website}</Text>
+                <Text>{email}</Text>
+                <Text>{phone}</Text>
+                <Text>{website}</Text>
               </Stack>
             </CardBody>
           </Card>
-          {/* <p>{user.email}</p>
-          <p>{user.phone}</p>
-          <p>{user.website}</p> */}
         </>
       )}
     </div>

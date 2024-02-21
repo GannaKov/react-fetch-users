@@ -16,6 +16,12 @@ const Address = () => {
       })
       .catch((error) => console.log(error.message));
   }, [id]);
+
+  if (!user) {
+    return null;
+  }
+
+  const { street, suite, city, zipcode } = user;
   return (
     <div className={styles.cardWrp}>
       {user && (
@@ -25,19 +31,13 @@ const Address = () => {
               <Heading size="md">User&apos;s Address</Heading>{" "}
               <Stack mt="6" spacing="2">
                 <Text>
-                  {user.street} {user.suite}
+                  {street} {suite}
                 </Text>
-                <Text>{user.city}</Text>
-                <Text>{user.zipcode}</Text>
+                <Text>{city}</Text>
+                <Text>{zipcode}</Text>
               </Stack>
             </CardBody>
           </Card>
-          {/* <p>Address</p>
-          <p>
-            {user.street} {user.suite}
-          </p>
-          <p>{user.city}</p>
-          <p>{user.zipcode}</p> */}
         </>
       )}
     </div>

@@ -4,6 +4,3 @@
 .userCardLink:is(:hover, :focus) {
   transform: scale(1.15);
 }
-/* .userCard {
-  border: 1px solid green;
-} */
