@@ -8,7 +8,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-fetch-users/">
+    <BrowserRouter basename="/react-fetch-users">
       {/* basename="/your_repo_name/" */}
       <ChakraProvider>
         <App />
