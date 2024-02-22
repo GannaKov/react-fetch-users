@@ -13,10 +13,10 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   // root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-fetch-users/">
-      <ChakraProvider>
-        <App />
-      </ChakraProvider>
-    </BrowserRouter>
+    {/* <BrowserRouter basename="/react-fetch-users/"> */}
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+    {/* </BrowserRouter> */}
   </React.StrictMode>
 );
