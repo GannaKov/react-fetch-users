@@ -62,7 +62,7 @@ const router = createBrowserRouter(
     },
     // { path: "*", Component: Root },
   ],
-  { basename: "/react-fetch-users" }
+  { basename: "/react-fetch-users/" }
 );
 
 const App = () => {
