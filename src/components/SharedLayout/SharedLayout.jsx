@@ -31,6 +31,18 @@ const SharedLayout = () => {
                 Users
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/contactus"
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.active} ${styles.headerNavLink}`
+                    : `${styles.headerNavLink}`
+                }
+              >
+                Contact us
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
