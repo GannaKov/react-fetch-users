@@ -1,5 +1,6 @@
 {
-  "name": "template-vite-react",
+  "name": "react-fetch-users",
+  "homepage": "https://gannakov.github.io/react-fetch-users/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

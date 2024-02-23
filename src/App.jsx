@@ -45,13 +45,13 @@ const router = createBrowserRouter(
           path: "/users",
           // Component: UsersPage,
           children: [
-            { index: true, Component: UsersPage },
+            { index: true, element: <UsersPage /> },
             {
               path: "/users/:id",
-              Component: SingleUserPage,
+              element: <SingleUserPage />,
               children: [
-                { path: "address", Component: Address },
-                { path: "contact", Component: Contact },
+                { path: "address", element: <Address /> },
+                { path: "contact", element: <Contact /> },
               ],
             },
           ],
