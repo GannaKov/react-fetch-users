@@ -2,7 +2,7 @@ import React from "react";
 
 import ReactDOM from "react-dom/client";
 // import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 // import { createBrowserRouter } from "react-router-dom";
 
 import { ChakraProvider } from "@chakra-ui/react";

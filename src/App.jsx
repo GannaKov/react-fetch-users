@@ -39,6 +39,7 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <SharedLayout />,
+      errorElement: <NotFound />,
       children: [
         { index: true, Component: HomePage },
         {
@@ -56,11 +57,10 @@ const router = createBrowserRouter(
             },
           ],
         },
-        { path: "/contactus", Component: ContactPage },
-        { path: "*", Component: NotFound },
+        { path: "/contactus", element: <ContactPage /> },
+        // { path: "*", Component: NotFound },
       ],
     },
-    // { path: "*", Component: Root },
   ],
   { basename: "/react-fetch-users/" }
 );
